@@ -116,6 +116,7 @@ function callTakeHostage()
 				TriggerServerEvent("TakeHostage:sync", targetSrc)
 				ensureAnimDict(takeHostage.aggressor.animDict)
 				takeHostage.type = "aggressor"
+				TaskPlayAnim(playerPed, takeHostage.aggressor.animDict, takeHostage.aggressor.anim, 8.0, -8.0, 100000, takeHostage.aggressor.flag, 0, false, false, false)
 			else
 				drawNativeNotification("~r~No one nearby to take as hostage!")
 			end
