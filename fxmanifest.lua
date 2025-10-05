@@ -1,10 +1,9 @@
--- Resource Metadata
-fx_version 'bodacious'
+fx_version 'adamant'
 games { 'gta5' }
 
-author 'rubbertoe98'
-description 'TakeHostage'
-version '1.0.0'
+author 'JGN Development Team'
+description 'TakeHostage for JRP Server'
+version '1.0.1'
 
 client_script "cl_takehostage.lua"
 server_script "sv_takehostage.lua"
