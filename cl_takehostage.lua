@@ -72,11 +72,14 @@ end
 
 RegisterCommand("takehostage",function()
 	TriggerServerEvent("TakeHostage:checkPermission")
-end)
+end, false)
 
 RegisterCommand("th",function()
 	TriggerServerEvent("TakeHostage:checkPermission")
-end)
+end, false)
+
+-- Register key mapping for easier access (optional, players can set their own keybind in Settings > Keybinds > FiveM)
+RegisterKeyMapping('th', 'Take Hostage', 'keyboard', '')
 
 RegisterNetEvent("TakeHostage:proceed")
 AddEventHandler("TakeHostage:proceed", function()
@@ -170,8 +173,8 @@ AddEventHandler("TakeHostage:notify", function(msg)
 end)
 
 Citizen.CreateThread(function()
-	local playerPed = PlayerPedId()
 	while true do
+		local playerPed = PlayerPedId()
 		if takeHostage.type == "aggressor" then
 			if not IsEntityPlayingAnim(playerPed, takeHostage.aggressor.animDict, takeHostage.aggressor.anim, 3) then
 				TaskPlayAnim(playerPed, takeHostage.aggressor.animDict, takeHostage.aggressor.anim, 8.0, -8.0, 100000, takeHostage.aggressor.flag, 0, false, false, false)
@@ -186,8 +189,8 @@ Citizen.CreateThread(function()
 end)
 
 Citizen.CreateThread(function()
-	local playerPed = PlayerPedId()
 	while true do
+		local playerPed = PlayerPedId()
 		if takeHostage.type == "aggressor" then
 			DisableControlAction(0, 24, true)
 			DisableControlAction(0, 25, true)
