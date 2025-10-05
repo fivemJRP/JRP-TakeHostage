@@ -1,4 +1,3 @@
--- filepath: c:\Users\xjer2\OneDrive\Documents\GitHub\JRP-TakeHostage\README.md
 # JRP-TakeHostage
 
 A FiveM script for GTA V that allows players to take hostages at gunpoint, with animations, controls, and server-side synchronization. Developed by the JGN Development Team for the JRP Server.
